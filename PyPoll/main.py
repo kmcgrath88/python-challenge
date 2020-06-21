@@ -16,21 +16,23 @@ with open(path,"r") as text: #Read csv file
         totalVotes.append(row[0])
         candidate, votes = row[2], 1 #Variables for dictionary
         if candidate not in Dict1: #If candidate not in dictionary, add to dictionary
-            Dict1[candidate] = votes #????     
+            Dict1[candidate] = votes    
         else:
             Dict1[candidate] +=1
-WIN = max(Dict1, key=Dict1.get) #??? #Find winner
+WIN = max(Dict1, key=Dict1.get) #Find winner
 
 #-----Print results to terminal-----#
 print(f'Election Results')
 print(f'--------------------------')
 print(f'Total Votes: {len(totalVotes)}')
-for candidate in Dict1: #Loop through dictionay, print candidates, calculate percent of votes
+for candidate in Dict1: #Loop through dictionary, print candidates, calculate percent of votes
     print(f'{candidate}: {(Dict1[candidate]/(len(totalVotes))*100):.3f}% ({Dict1[candidate]})')
 print(f'--------------------------')       
 print(f'Winner: {WIN}')
+print(f'--------------------------')
 
 outPATH = os.path.join("Analysis", "Election Results.txt") #Outpath to create text file
+
 #-----Print results to text file-----#
 with open(outPATH, "w") as text2:
 
