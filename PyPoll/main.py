@@ -30,7 +30,7 @@ for candidate in Dict1: #Loop through dictionay, print candidates, calculate per
 print(f'--------------------------')       
 print(f'Winner: {WIN}')
 
-outPATH = os.path.join("Analysis", "Election Results.txt") #Outpath to create text file
+outPATH = os.path.join("Analysis", "ElectionResults.txt") #Outpath to create text file
 #-----Print results to text file-----#
 with open(outPATH, "w") as text2:
 
