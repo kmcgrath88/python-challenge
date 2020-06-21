@@ -18,7 +18,7 @@ with open(path,"r") as text: #Read csv file
         if candidate not in Dict1: #If candidate not in dictionary, add to dictionary
             Dict1[candidate] = votes    
         else:
-            Dict1[candidate] +=1
+            Dict1[candidate] +=1 #Count votes for each candidate
 WIN = max(Dict1, key=Dict1.get) #Find winner
 
 #-----Print results to terminal-----#
